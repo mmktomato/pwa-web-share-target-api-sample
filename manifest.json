@@ -1,0 +1,34 @@
+{
+  "name": "PWA Web Share Target API Sample",
+  "short_name": "Sample",
+  "scope": "/pwa-web-share-target-api-sample/",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "description": "A PWA sample that demonstrates the Web Share Target API",
+  "icons": [
+    {
+      "src": "images/48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

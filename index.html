@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PWA Web Share Target API Sample</title>
+</head>
+<body>
+  <ul>
+    <li id="title"></li>
+    <li id="text"></li>
+    <li id="url"></li>
+  </ul>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const parsedUrl = new URL(window.location);
+      const title = parsedUrl.searchParams.get("title");
+      const text = parsedUrl.searchParams.get("text");
+      const url = parsedUrl.searchParams.get("url");
+
+      document.querySelector("#title").textContent = `Title: ${title}`;
+      document.querySelector("#text").textContent = `Text: ${text}`;
+      document.querySelector("#url").textContent = `Url: ${url}`;
+    })
+  </script>
+</body>
+</html>
